@@ -1,0 +1,35 @@
+
+.form-groups{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 20px;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    text-align: left;
+}
+
+.form-group input {
+    width: 200px;
+}
+
+.form-group label {
+    min-width: 100px;
+}
+
+.add-btn{
+    display: flex;
+    margin: 20px;
+}
+
+.err-msg{
+    color: pink;
+    margin: 0 10px;
+}

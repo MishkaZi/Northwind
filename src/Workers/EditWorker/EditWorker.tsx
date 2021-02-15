@@ -30,13 +30,13 @@ const EditWorker = (): JSX.Element => {
 
   const submit = async (data: WorkerModel) => {
     try {
-      const result = await Axios.post<WorkerModel>(
-        'http://localhost:3030/api/employees'
+      const result = await Axios.put<WorkerModel>(
+        `http://localhost:3030/api/employees/${data.id}`
       );
-      console.log('Worker has been edited');
+      alert('Worker has been edited');
       history.push('/HomePage');
     } catch (error) {
-      console.log(error);
+      alert(error);
     }
   };
 

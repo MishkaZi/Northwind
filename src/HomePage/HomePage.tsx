@@ -13,8 +13,8 @@ import { deleteWorkerWithId } from '../Workers/redux/workersActions';
 const HomePage = (): JSX.Element => {
   const dispatch = useDispatch();
   const workers = useSelector<any>((state) => state.HomePage.workers);
-  const deleteId = useSelector<any>((state) => state.DeleteWorker.id);
 
+  const deleteId = useSelector<any>((state) => state.DeleteWorker.id);
 
   const getAllWorkers = async () => {
     try {
@@ -47,6 +47,7 @@ const HomePage = (): JSX.Element => {
   useEffect(() => {
     if (deleteId) {
       removeMessage();
+      dispatch(deleteWorkerWithId(0));
     }
   }, [deleteId]);
 

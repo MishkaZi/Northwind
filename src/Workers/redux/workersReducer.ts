@@ -27,7 +27,7 @@ export const workerReducer = (state = initStateWorker, action) => {
   return newState;
 };
 
-const initDeleteId = { id: [] };
+const initDeleteId = { id: 0 };
 export const deleteWorkerIdReducer = (state = initDeleteId, action) => {
   const newState = { ...state };
   switch (action.type) {
